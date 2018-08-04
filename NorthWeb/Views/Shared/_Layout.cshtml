@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <section id="main-wrapper" class="theme-default">
+        <header id="header">
+            <!--logo start-->
+            <div class="brand">
+                <a href="index-2.html" class="logo">
+                    <i class="icon-layers"></i>
+                    <span>North</span>Wind
+                </a>
+            </div>
+            <!--logo end-->
+            <ul class="nav navbar-nav navbar-left">
+                <li class="toggle-navigation toggle-left">
+                    <button class="sidebar-toggle" id="toggle-left">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </li>
+                <li class="toggle-profile hidden-xs">
+                    <button type="button" class="btn btn-default" id="toggle-profile">
+                        <i class="icon-user"></i>
+                    </button>
+                </li>
+                <li class="hidden-xs hidden-sm">
+                    <input type="text" class="search" placeholder="Search project...">
+                    <button type="submit" class="btn btn-sm btn-search">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+
+                <li class="toggle-fullscreen hidden-xs">
+                    <button type="button" class="btn btn-default expand" id="toggle-fullscreen">
+                        <i class="fa fa-expand"></i>
+                    </button>
+                </li>
+
+            </ul>
+        </header>
+        <!--sidebar left start-->
+        <aside class="sidebar sidebar-left">
+
+            <nav>
+                <h5 class="sidebar-header">Navigation</h5>
+                <ul class="nav nav-pills nav-stacked">
+                    <li>
+                        <a href=@Url.Action("Index", "Home") title="Dashboard">
+                            <i class="fa  fa-fw fa-tachometer">
+                            </i> Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href=@Url.Action("Contact", "Home") title="Contact">
+                            <i class="fa  fa-fw fa-tachometer">
+                            </i> Contact
+                        </a>
+                    </li>
+                    <li>
+                        <a href=@Url.Action("About", "Home") title="About">
+                            <i class="fa  fa-fw fa-tachometer">
+                            </i> About
+                        </a>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="#" title="UI Elements">
+                            <i class="fa  fa-fw fa-cogs"></i> UI Elements
+                        </a>
+                        <ul class="nav-sub">
+                            <li>
+                                <a href="ui-buttons.html" title="Buttons">
+                                    Buttons
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ui-sliders-progress.html" title="Sliders &amp; Progress">
+                                    Sliders &amp; Progress
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ui-modals-popus.html" title="Modals &amp; Popups">
+                                    Modals &amp; Popups
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ui-tabs-accordions.html" title="Tabs &amp; Accordions">
+                                    Tabs &amp; Accordions
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="ui-alerts-notifications.html" title="Alerts &amp; Notifications">
+                                    Alerts &amp; Notifications
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ui-nestable-lists.html" title=" Nestable Lists">
+                                    Nestable Lists
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ui-panels.html" title="Panels">
+                                    Panels
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ui-icons.html" title="Icons">
+                                    Icons
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ui-typography.html" title="Typography">
+                                    Typography
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+        </aside>
+        <section class="main-content-wrapper">
+
+
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+        </section>
+    </section>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/appScripts")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
